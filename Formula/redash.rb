@@ -5,21 +5,21 @@
 class Redash < Formula
   desc "Command-line client for the Redash REST API (agent-first)"
   homepage "https://github.com/leroy/redash"
-  version "1.0.1"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/leroy/redash/releases/download/v1.0.1/redash_1.0.1_darwin_x86_64.tar.gz"
-      sha256 "47d5ffac6898f866ac2216f4d9015cd36ee69d93565726af614e9448274932da"
+      url "https://github.com/leroy/redash/releases/download/v1.1.0/redash_1.1.0_darwin_x86_64.tar.gz"
+      sha256 "5538d879e20e75c19c05a5b85fee6f8c57b58890016b4a1a54debc2f862a4ed1"
 
       define_method(:install) do
         bin.install "redash"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/leroy/redash/releases/download/v1.0.1/redash_1.0.1_darwin_arm64.tar.gz"
-      sha256 "127e7ad7dc8c3d7886de8ce876ddc7489a4515f1b8e4f2c497626d2e3bef0783"
+      url "https://github.com/leroy/redash/releases/download/v1.1.0/redash_1.1.0_darwin_arm64.tar.gz"
+      sha256 "99b5ae4c6240cc2f6eb850e8963e37a91267a519f4e885d5dadfd5e3e629d77b"
 
       define_method(:install) do
         bin.install "redash"
@@ -29,15 +29,15 @@ class Redash < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/leroy/redash/releases/download/v1.0.1/redash_1.0.1_linux_x86_64.tar.gz"
-      sha256 "d4ee81ac44a1813a4dd7e3bf5421f3e73248decda0aaabb985607ac80cefc20f"
+      url "https://github.com/leroy/redash/releases/download/v1.1.0/redash_1.1.0_linux_x86_64.tar.gz"
+      sha256 "547b2e8eac171e877a8f51711913435e68d2fd212e63fb3df07ca7239d09fe7d"
       define_method(:install) do
         bin.install "redash"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/leroy/redash/releases/download/v1.0.1/redash_1.0.1_linux_arm64.tar.gz"
-      sha256 "51942690c0202143ee3bd620319632653ec8ab379bdcc32c74c39b0a6a3f19a8"
+      url "https://github.com/leroy/redash/releases/download/v1.1.0/redash_1.1.0_linux_arm64.tar.gz"
+      sha256 "e418e7deb1141e0239d599805968f8c5b1fe9434c20585db1b05218324e6fd35"
       define_method(:install) do
         bin.install "redash"
       end
